@@ -477,6 +477,7 @@ if test "x$have_dbus" != "xyes"; then
 fi
 
 AM_CONDITIONAL(HAVE_DBUS, test x$have_dbus = xyes)
+AM_CONDITIONAL(HAVE_CHIROPRAKTIK, test xyes = xyes)
         
                 
 dnl AC_CHECK_LIB(Xmu,XmuClientWindow,LIBS="$LIBS -lXmu",
