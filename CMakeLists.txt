@@ -782,7 +782,8 @@ if (UNIX AND NOT APPLE)
   set (PLATFORM_OS_NAME "Unix")
 
   # TODO: make option.
-  set (HAVE_MONITORS "mutter,screensaver,record,x11events")
+  # keep fspath monitor last, it is only useful as fallback for geeks
+  set (HAVE_MONITORS "mutter,screensaver,record,x11events,fspath")
 
   find_package(X11)
 

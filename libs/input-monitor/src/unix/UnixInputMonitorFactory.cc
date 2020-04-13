@@ -35,6 +35,7 @@
 #include "X11InputMonitor.hh"
 #include "XScreenSaverMonitor.hh"
 #include "MutterInputMonitor.hh"
+#include "FSPathInputMonitor.hh"
 
 using namespace std;
 using namespace workrave;
@@ -110,6 +111,11 @@ UnixInputMonitorFactory::create_monitor(IInputMonitorFactory::MonitorCapability 
             {
               monitor = IInputMonitor::Ptr(new MutterInputMonitor());
             }
+          else if (actual_monitor_method == "fspath")
+            {
+              monitor = IInputMonitor::Ptr(new FSPathInputMonitor());
+            }
+
 
           initialized = monitor->init();
 
